@@ -31,9 +31,11 @@ public class Flat {
     @Positive
     private BigDecimal area;
 
-    @NotBlank(message = "Number of residents are required")
+    @NotBlank(message = "Number of residents is required")
     @PositiveOrZero
     private Integer residentsNumber;
+
+
 
 
 
