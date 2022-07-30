@@ -1,6 +1,6 @@
-package com.example.flat.model;
+package com.example.commons.model;
 
-import com.example.flat.enums.StreetName;
+import com.example.commons.enums.StreetName;
 import lombok.*;
 
 import javax.persistence.*;
@@ -34,6 +34,10 @@ public class Flat {
     @NotBlank(message = "Number of residents is required")
     @PositiveOrZero
     private Integer residentsNumber;
+
+
+    @OneToOne(mappedBy = "flat")
+    private Rent rent;
 
 
 

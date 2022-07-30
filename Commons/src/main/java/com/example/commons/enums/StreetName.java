@@ -1,4 +1,4 @@
-package com.example.flat.enums;
+package com.example.commons.enums;
 
 public enum StreetName {
 

@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Flat" />
         <module name="eureka_server" />
+        <module name="Commons" />
         <module name="Rent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Commons" target="11" />
       <module name="eureka_server" target="11" />
       <module name="Flat" target="11" />
       <module name="Rent" target="11" />
@@ -19,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Commons" options="-parameters" />
       <module name="Flat" options="-parameters" />
       <module name="Rent" options="-parameters" />
       <module name="eureka_server" options="-parameters" />
