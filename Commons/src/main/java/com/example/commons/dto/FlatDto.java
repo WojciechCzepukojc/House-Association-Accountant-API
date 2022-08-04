@@ -20,6 +20,6 @@ public class FlatDto {
     private String flatNumber;
     private BigDecimal area;
     private Integer residentsNumber;
-    private Rent rent;
+
 
 }

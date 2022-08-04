@@ -4,7 +4,7 @@ import com.example.commons.enums.StreetName;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
@@ -21,23 +21,21 @@ public class Flat {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @NotBlank(message = "Street is required. Select from: KATEDRALNA, RATUSZOWA, ZAMKOWA")
+    @NotNull
     private StreetName streetName;
 
-    @NotBlank(message = "Flat number is required")
+    @NotNull
     private String FlatNumber;
 
-    @NotBlank(message = "Flat area is required")
+    @NotNull
     @Positive
     private BigDecimal area;
 
-    @NotBlank(message = "Number of residents is required")
+//    @NotBlank(message = "Number of residents is required")
     @PositiveOrZero
     private Integer residentsNumber;
 
 
-    @OneToOne(mappedBy = "flat")
-    private Rent rent;
 
 
 

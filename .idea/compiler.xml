@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Flat" />
         <module name="eureka_server" />
+        <module name="eurekaserver" />
+        <module name="Flat" />
         <module name="Rent" />
       </profile>
       <profile name="Annotation profile for Commons" enabled="true">
@@ -27,6 +28,7 @@
     <bytecodeTargetLevel>
       <module name="commons" target="11" />
       <module name="eureka_server" target="11" />
+      <module name="eurekaserver" target="11" />
       <module name="Flat" target="11" />
       <module name="Rent" target="11" />
     </bytecodeTargetLevel>
@@ -37,6 +39,7 @@
       <module name="Rent" options="-parameters" />
       <module name="commons" options="-parameters" />
       <module name="eureka_server" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
     </option>
   </component>
 </project>
