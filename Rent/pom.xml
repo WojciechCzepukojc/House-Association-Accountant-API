@@ -63,6 +63,11 @@
 			<artifactId>mapstruct</artifactId>
 			<version>${org.mapstruct.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>Commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

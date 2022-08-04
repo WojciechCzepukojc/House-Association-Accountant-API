@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Commons/Commons.iml" filepath="$PROJECT_DIR$/Commons/Commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/Flat/Flat.iml" filepath="$PROJECT_DIR$/Flat/Flat.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/House Association Accountant API.iml" filepath="$PROJECT_DIR$/.idea/House Association Accountant API.iml" />
       <module fileurl="file://$PROJECT_DIR$/Rent/Rent.iml" filepath="$PROJECT_DIR$/Rent/Rent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Commons/commons.iml" filepath="$PROJECT_DIR$/Commons/commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka_server/eureka_server.iml" filepath="$PROJECT_DIR$/eureka_server/eureka_server.iml" />
     </modules>
   </component>
