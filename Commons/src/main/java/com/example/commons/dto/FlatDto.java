@@ -17,7 +17,7 @@ public class FlatDto {
 
     private Long id;
     private StreetName streetName;
-    private String FlatNumber;
+    private String flatNumber;
     private BigDecimal area;
     private Integer residentsNumber;
     private Rent rent;

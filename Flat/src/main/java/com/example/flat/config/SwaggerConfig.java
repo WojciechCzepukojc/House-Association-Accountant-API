@@ -17,10 +17,10 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.flat.config"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.flat.controllers"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
 }
-//http://localhost:8010/swagger-ui/index.html
+//http://localhost:8082/swagger-ui/index.html
