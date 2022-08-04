@@ -1,3 +1,4 @@
+// TODO: konwencyjnie pakiety nazywamy w ten sposob -> "com.example.eurekaserver"
 package com.example.eureka_server;
 
 import org.springframework.boot.SpringApplication;

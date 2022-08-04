@@ -24,3 +24,10 @@
 //
 //}
 //http://localhost:8080/swagger-ui/index.html
+
+
+
+/*
+TODO: do usuniecia - w commonsach nie potrzebujesz configu swaggera,
+ jako ze tu nie powinny znajdowac sie zadne endpointy ani controllery.
+*/

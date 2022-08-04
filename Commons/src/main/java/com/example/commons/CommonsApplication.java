@@ -11,3 +11,8 @@ public class CommonsApplication {
 	}
 
 }
+
+// TODO: Dodaj .gitignore
+// TODO: Klasa startowa "CommonsApplication" do usuniecia (commonsy to biblioteka) -> Nie startujemy tego jako oddzielnej applikacji
+
+

@@ -60,11 +60,16 @@
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
+
+<!--  TODO: jezeli nie zamierzasz tworzyc mapperow w tym projekcie a jedynie korzystac z tych ktore sa w commonsach -->
+<!--   to dependency "mapstruct" mozna usunac -->
+
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${org.mapstruct.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>Commons</artifactId>
