@@ -20,24 +20,24 @@ public class Rent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Heating value is required")
+    @NotNull
     @PositiveOrZero
     private BigDecimal heating;
 
-    @NotBlank(message = "Water consumption value is required")
+    @NotNull
     @PositiveOrZero
     private BigDecimal waterAndSewage;
 
-    @NotBlank(message = "Garbage collection value is required")
+    @NotNull
     @PositiveOrZero
     private BigDecimal garbage;
 
-    @NotBlank(message = "Garbage collection value is required")
+    @NotNull
     @Positive
     private BigDecimal renovationFund;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotBlank(message = "Date is required")
+    @NotNull
     @PastOrPresent
     private LocalDate accrualDate;
 
