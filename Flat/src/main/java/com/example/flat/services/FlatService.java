@@ -1,6 +1,7 @@
 package com.example.flat.services;
 
 import com.example.commons.dto.FlatDto;
+import com.example.commons.exceptions.ResourceNotFoundException;
 import com.example.commons.mappers.FlatMapper;
 import com.example.commons.model.Flat;
 import com.example.flat.repositories.FlatRepository;
@@ -23,5 +24,16 @@ public void create(FlatDto flatDto){
     flatRepository.save(flat);
     log.debug("Created flat with id " + flat.getId());
 }
+
+public Flat getFlat(Long id){
+    return flatRepository.findById(id)
+            .orElseThrow(()-> getFlatNotFoundException(id));
+}
+
+private ResourceNotFoundException getFlatNotFoundException(Long id){
+    return new ResourceNotFoundException(String.format("Flat with id '%s' not found", id));
+}
+
+
 
 }
