@@ -30,6 +30,11 @@ public Flat getFlat(Long id){
             .orElseThrow(()-> getFlatNotFoundException(id));
 }
 
+public FlatDto getById(Long id){
+    Flat flat = getFlat(id);
+    return flatMapper.map(flat);
+}
+
 private ResourceNotFoundException getFlatNotFoundException(Long id){
     return new ResourceNotFoundException(String.format("Flat with id '%s' not found", id));
 }

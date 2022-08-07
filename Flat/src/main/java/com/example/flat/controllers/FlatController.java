@@ -19,5 +19,11 @@ public class FlatController {
         flatService.create(flatDto);
     }
 
+    @GetMapping("{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public FlatDto getById(Long id){
+        return flatService.getById(id);
+    }
+
 
 }
