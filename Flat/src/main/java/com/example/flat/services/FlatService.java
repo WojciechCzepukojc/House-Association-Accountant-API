@@ -44,7 +44,7 @@ public FlatDto getById(Long id){
     return flatMapper.map(flat);
 }
 
-    @Cacheable()
+    @Cacheable("flatsPage")
     public PageDTO<FlatDto> getPage(PageRequest pageRequest) {
         Page<FlatDto> flatsPage = flatRepository.getFlatsPage(pageRequest);
         return pagesMapper.map(flatsPage);
