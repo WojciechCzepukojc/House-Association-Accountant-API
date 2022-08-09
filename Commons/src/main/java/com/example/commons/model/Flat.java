@@ -25,7 +25,7 @@ public class Flat {
     private StreetName streetName;
 
     @NotNull
-    private String FlatNumber;
+    private String flatNumber;
 
     @NotNull
     @Positive

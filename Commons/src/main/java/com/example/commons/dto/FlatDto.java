@@ -1,11 +1,7 @@
 package com.example.commons.dto;
 
 import com.example.commons.enums.StreetName;
-import com.example.commons.model.Rent;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
