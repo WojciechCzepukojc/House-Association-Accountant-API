@@ -3,6 +3,7 @@ package com.example.flat.services;
 import com.example.commons.dto.FlatDto;
 import com.example.commons.dto.PageDTO;
 import com.example.commons.exceptions.ResourceNotFoundException;
+import com.example.commons.exceptions.ResurceValidationException;
 import com.example.commons.mappers.FlatMapper;
 import com.example.commons.mappers.PagesMapper;
 import com.example.commons.model.Flat;
@@ -48,6 +49,22 @@ public FlatDto getById(Long id){
     public PageDTO<FlatDto> getPage(PageRequest pageRequest) {
         Page<FlatDto> flatsPage = flatRepository.getFlatsPage(pageRequest);
         return pagesMapper.map(flatsPage);
+    }
+
+    public void updateById(Long id, FlatDto flatDto){
+    if(!flatRepository.existsById(id)){
+        log.warn("Flat with id '{}' not found", id);
+        throw getFlatNotFoundException(id);
+    }
+    Long flatDtoId = flatDto.getId();
+    if (!id.equals(flatDtoId)){
+        log.warn("Id parameter '{}' and flat id '{}' does not match", id, flatDtoId);
+        throw new ResurceValidationException(
+                String.format("Id parameter '%s' and flat id '%s' does not match",
+                        id, flatDtoId));
+    }
+    Flat flat = flatMapper.map(flatDto);
+    flatRepository.save(flat);
     }
 
 private ResourceNotFoundException getFlatNotFoundException(Long id){

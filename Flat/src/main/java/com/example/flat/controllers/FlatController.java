@@ -45,5 +45,12 @@ public class FlatController {
         return flatService.getPage(pageRequest);
     }
 
+    @PutMapping("update/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void  update(@PathVariable Long id,
+                        @RequestBody FlatDto flatDto){
+        flatService.updateById(id, flatDto);
+    }
+
 
 }
