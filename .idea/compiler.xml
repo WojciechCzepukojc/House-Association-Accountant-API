@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_server" />
-        <module name="eurekaserver" />
         <module name="Flat" />
+        <module name="eurekaserver" />
         <module name="Rent" />
       </profile>
       <profile name="Annotation profile for Commons" enabled="true">

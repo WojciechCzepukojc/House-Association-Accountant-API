@@ -41,6 +41,11 @@ public class Rent {
     @PastOrPresent
     private LocalDate accrualDate;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @NotNull
+    @PastOrPresent
+    private LocalDate dateOfPayment;
+
     @JsonIgnore
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
