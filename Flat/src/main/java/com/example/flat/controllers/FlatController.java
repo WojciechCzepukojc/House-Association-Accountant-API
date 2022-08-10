@@ -52,5 +52,11 @@ public class FlatController {
         flatService.updateById(id, flatDto);
     }
 
+    @DeleteMapping("delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete (@PathVariable Long id){
+        flatService.deleteById(id);
+    }
+
 
 }

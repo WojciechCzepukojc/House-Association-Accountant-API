@@ -67,6 +67,10 @@ public FlatDto getById(Long id){
     flatRepository.save(flat);
     }
 
+    public void deleteById(Long id){
+        flatRepository.deleteById(id);
+    }
+
 private ResourceNotFoundException getFlatNotFoundException(Long id){
     return new ResourceNotFoundException(String.format("Flat with id '%s' not found", id));
 }
