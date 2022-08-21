@@ -21,5 +21,5 @@ public class RentDto {
     private BigDecimal garbage;
     private BigDecimal renovationFund;
     private LocalDate accrualDate;
-    private Flat flat;
+    private Long flatId;
 }
