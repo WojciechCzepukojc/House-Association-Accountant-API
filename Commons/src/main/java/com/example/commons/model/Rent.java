@@ -46,7 +46,6 @@ public class Rent {
     @PastOrPresent
     private LocalDate dateOfPayment;
 
-    @JsonIgnore
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToOne(fetch = FetchType.LAZY)
