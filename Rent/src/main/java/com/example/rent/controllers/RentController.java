@@ -2,6 +2,8 @@ package com.example.rent.controllers;
 
 
 import com.example.commons.dto.RentDto;
+import com.example.commons.mappers.FlatMapper;
+import com.example.rent.httpClients.FlatClient;
 import com.example.rent.services.RentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class RentController {
 
     private final RentService rentService;
+
 
     @PostMapping("create")
     @ResponseStatus(HttpStatus.CREATED)
