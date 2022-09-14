@@ -1,6 +1,5 @@
 package com.example.commons.dto;
 
-import com.example.commons.model.Flat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

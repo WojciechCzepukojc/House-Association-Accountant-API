@@ -2,8 +2,6 @@ package com.example.rent.controllers;
 
 
 import com.example.commons.dto.RentDto;
-import com.example.commons.mappers.FlatMapper;
-import com.example.rent.httpClients.FlatClient;
 import com.example.rent.services.RentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,7 +17,7 @@ public class RentController {
 
     @PostMapping("create")
     @ResponseStatus(HttpStatus.CREATED)
-    public void create (@RequestBody RentDto rentDto){
+    public void create(@RequestBody RentDto rentDto) {
         rentService.create(rentDto);
     }
 }
