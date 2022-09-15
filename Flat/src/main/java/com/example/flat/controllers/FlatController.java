@@ -1,5 +1,6 @@
 package com.example.flat.controllers;
 
+import com.example.commons.dto.FlatDto;
 import com.example.commons.dto.PageDTO;
 import com.example.commons.utils.PageReqUtils;
 import com.example.flat.services.FlatService;
@@ -9,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.example.commons.dto.FlatDto;
 
 import static com.example.commons.utils.PageReqUtils.*;
 
@@ -22,13 +22,13 @@ public class FlatController {
 
     @PostMapping("create")
     @ResponseStatus(HttpStatus.CREATED)
-    public void create (@RequestBody FlatDto flatDto){
+    public void create(@RequestBody FlatDto flatDto) {
         flatService.create(flatDto);
     }
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public FlatDto getById(Long id){
+    public FlatDto getById(@PathVariable Long id) {
         return flatService.getById(id);
     }
 
@@ -47,14 +47,14 @@ public class FlatController {
 
     @PutMapping("update/{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    public void  update(@PathVariable Long id,
-                        @RequestBody FlatDto flatDto){
+    public void update(@PathVariable Long id,
+                       @RequestBody FlatDto flatDto) {
         flatService.updateById(id, flatDto);
     }
 
     @DeleteMapping("delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete (@PathVariable Long id){
+    public void delete(@PathVariable Long id) {
         flatService.deleteById(id);
     }
 

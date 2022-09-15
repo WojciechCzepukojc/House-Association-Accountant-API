@@ -16,8 +16,8 @@ public class ErrorHandler {
         return new ResponseEntity<>(ex.getMessage(), ex.getHttpStatus());
     }
 
-    @ExceptionHandler(ResurceValidationException.class)
-    public ResponseEntity<String> handleResurceValidation(ResurceValidationException ex) {
+    @ExceptionHandler(ResourceValidationException.class)
+    public ResponseEntity<String> handleResurceValidation(ResourceValidationException ex) {
         log.error("ResurceValidationException: {}", ex.getMessage());
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
     }

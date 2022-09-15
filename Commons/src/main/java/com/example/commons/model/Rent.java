@@ -1,11 +1,13 @@
 package com.example.commons.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -51,8 +53,6 @@ public class Rent {
     @OneToOne(fetch = FetchType.LAZY)
     @NotNull(message = "Flat is required.")
     private Flat flat;
-
-
 
 
 }

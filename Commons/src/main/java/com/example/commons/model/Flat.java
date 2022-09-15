@@ -1,7 +1,10 @@
 package com.example.commons.model;
 
 import com.example.commons.enums.StreetName;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -31,15 +34,9 @@ public class Flat {
     @Positive
     private BigDecimal area;
 
-//    @NotBlank(message = "Number of residents is required")
+    //    @NotBlank(message = "Number of residents is required")
     @PositiveOrZero
     private Integer residentsNumber;
-
-
-
-
-
-
 
 
 }

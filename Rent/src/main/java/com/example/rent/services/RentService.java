@@ -13,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 
-
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -27,14 +26,14 @@ public class RentService {
 
     private final FlatMapper flatMapper;
 
-    public void create(RentDto rentDto){
+    public void create(RentDto rentDto) {
         Rent rent = rentMapper.map(rentDto);
         FlatDto flatDto = flatClient.getById(rentDto.getFlatId());
         Flat flat = flatMapper.map(flatDto);
         rent.setFlat(flat);
 
         rentRepository.save(rent);
-        log.debug("Rent created succesfully");
+        log.debug("Rent created successfully");
 
 
     }
