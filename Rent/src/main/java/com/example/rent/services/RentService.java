@@ -12,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 
 @Slf4j
 @Service
@@ -26,6 +28,8 @@ public class RentService {
 
     private final FlatMapper flatMapper;
 
+    private final Rent rent;
+
     public void create(RentDto rentDto) {
         Rent rent = rentMapper.map(rentDto);
         FlatDto flatDto = flatClient.getById(rentDto.getFlatId());
@@ -38,12 +42,12 @@ public class RentService {
 
     }
 
-//    private BigDecimal heatingCalculation(){
-//        BigDecimal flatArea = rent.getFlat().getArea();
-//        final double heatingRate = 2.37;
-//        return flatArea.multiply(BigDecimal.valueOf(heatingRate));
-//
-//
-//    }
+    private BigDecimal heatingCalculation(){
+        BigDecimal flatArea = rent.getFlat().getArea();
+        final double heatingRate = 2.37;
+        return flatArea.multiply(BigDecimal.valueOf(heatingRate));
+
+
+    }
 
 }
